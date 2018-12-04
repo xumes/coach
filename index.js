@@ -39,13 +39,35 @@ app.post('/adiciona/funcionario', (req, res) => {
     }
 
     axios
-        .post(url, {func})
+        .post(url, func)
         .then(msg = res.send('cadastrado com sucesso'))
         .catch(e => res.send(e))
 
     res.json({'funcionario': func})
 
 })
+
+app.put('/altera/funcionario/:id', (req, res) => {
+    let url = `${BASE_URL}/funcionarios/${req.params.id}`
+    const func = {
+        nome: req.body.nome,
+        cargo: req.body.cargo
+    }
+
+    axios 
+        .put(url, func)
+        .then(msg = res.send('alterado com sucesso'))
+        .catch(e => res.send(e))
+})
+
+app.delete('/apaga/funcionario/:id', (req, res) => {
+    let url = `${BASE_URL}/funcionarios/${req.params.id}`
+    axios
+        .delete(url)
+        .then(msg = res.send('apagado com sucesso'))
+        .catch(e => res.send(e))
+})
+
 
 app.get('/lista/equipamentos', (req, res) => {
     res.send("Lista de equipamentos")

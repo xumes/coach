@@ -3,19 +3,32 @@
     {
       "id": 1,
       "nome": "Reginaldo",
-      "cargo": "Programador"
+      "cargo": "Programador",
+      "equipamento": {
+        "id": 1,
+        "tipo": "Mac",
+        "so": "Mac OS"
+      }
     },
     {
       "id": 2,
       "nome": "Gabriel",
-      "cargo": "Programador"
+      "cargo": "Programador",
+      "equipamento": {
+        "id": 2,
+        "tipo": "Thinkpad",
+        "so": "Windows"
+      }
     },
     {
-      "func": {
-        "nome": "Teste",
-        "cargo": "Tester"
-      },
-      "id": 3
+      "nome": "Mais um",
+      "cargo": "Eu alterei o cargo",
+      "id": 4,
+      "equipamento": {
+        "id": 2,
+        "tipo": "Thinkpad",
+        "so": "Windows"
+      }
     }
   ],
   "equipamentos": [
